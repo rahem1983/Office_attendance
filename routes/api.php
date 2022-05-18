@@ -24,6 +24,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::controller(AdminController::class)->group(function () {
     Route::post('setUser', 'setUser');
     Route::get('getTodayAttendance', 'getTodayAttendance');
+    Route::get('getUserId', 'getUserId');
+    Route::post('setIpHost', 'setIpHost');
+    Route::post('getIpHost', 'getIpHost');
+    Route::post('giveAttendance', 'giveAttendance');
 });
 
 Route::controller(UserController::class)->group(function () {
